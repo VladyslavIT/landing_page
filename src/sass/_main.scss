@@ -153,10 +153,13 @@
 }
 .timer-title{
   margin: 0;
+  font-size: large;
+    font-weight: 100;
 }
 .timer-box {
   display: flex;
   gap: 35px;
+  margin-top: 16px;
 }
 .timer-wrapper {
   display: flex;
@@ -166,8 +169,19 @@
   width: 50px;
   text-align: center;
 }
+.timer-thumb {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+
 .time-hour {
-  font-size: 40px;
+  width: 30px;
+  height: 40px;
+  background-color: rgb(233,201,83);
+  font-size: 30px;
+  font-weight: 500;
 }
 .time-min {
   font-size: 40px;
@@ -176,6 +190,7 @@
   font-size: 40px;
 }
 .time-text {
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 14px;
   margin: 0;
 }
