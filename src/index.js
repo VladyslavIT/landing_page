@@ -1,3 +1,34 @@
+const inputName = document.getElementById('input-name');
+inputName.addEventListener('click', () => {
+  inputName.placeholder = '';
+});
+
+inputName.addEventListener('blur', () => {
+  if (!inputName.value) {
+    inputName.placeholder = 'Введіть своє ім`я';
+  }
+});
+const inputPhone = document.getElementById('input-phone');
+inputPhone.addEventListener('click', () => {
+  inputPhone.placeholder = '';
+});
+
+inputPhone.addEventListener('blur', () => {
+  if (!inputPhone.value) {
+    inputPhone.placeholder = 'Введіть номер телефону';
+  }
+});
+
+const button = document.getElementById('buttonId');
+const button2 = document.getElementById('buttonId-2');
+
+const section = document.getElementById('input-section');
+button2.addEventListener('click', () => {
+  section.scrollIntoView({ behavior: 'smooth' });
+});
+button.addEventListener('click', () => {
+  section.scrollIntoView({ behavior: 'smooth' });
+});
 // const day = document.querySelector('.time-day');
 // const hour = document.querySelector('.time-hour');
 // const minute = document.querySelector('.time-min');
@@ -5,12 +36,10 @@
 
 // const getStorageTime = JSON.parse(localStorage.getItem('timerValue'));
 
-
-
 // При загрузке страницы восстанавливаем значения таймера из localStorage
 // window.addEventListener('load', () => {
 //   if (
-//     getStorageTime !== null 
+//     getStorageTime !== null
 //   ) {
 //     day.innerText = getStorageTime.valueDay < 10 ? '0' + getStorageTime.valueDay : getStorageTime.valueDay;
 //     hour.innerText = getStorageTime.valueHour < 10 ? '0' + getStorageTime.valueHour : getStorageTime.valueHour;
@@ -18,7 +47,6 @@
 //     second.innerText = getStorageTime.valueSec< 10 ? '0' + getStorageTime.valueSec : getStorageTime.valueSec;
 //   }
 // });
-
 
 // const targetTime = new Date().getTime() + (24 * 60 * 60 * 1000 * 2);
 
@@ -50,7 +78,7 @@
 //     return;
 //   }
 //   if (
-//     getStorageTime !== null 
+//     getStorageTime !== null
 //   ) {
 //     day.innerText = getStorageTime.valueDay < 10 ? '0' + getStorageTime.valueDay : getStorageTime.valueDay;
 //     hour.innerText = getStorageTime.valueHour < 10 ? '0' + getStorageTime.valueHour : getStorageTime.valueHour;
@@ -75,10 +103,6 @@
 // }
 
 // const timerInterval = setInterval(updateTimer, 1000);
-
-
-
-
 
 // // Функция для сохранения значений таймера в localStorage
 // function saveTimerValuesToLocalStorage() {

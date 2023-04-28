@@ -2,17 +2,26 @@
   width: 100%;
   height: 55px;
   background-color: rgb(184, 85, 64);
+  @media (min-width: 768px) {
+    height: 65px;
+  }
 }
 .title {
+  letter-spacing: 1px;
+  font-size: x-large;
   margin: 0;
   font-family: 'Open-Sans';
   text-shadow: 1px 1px 1px #000;
   text-align: center;
-  
   color: white;
- 
+  @media (min-width: 768px) {
+    letter-spacing: 3px;
+    font-size: xx-large;
+  }
 }
 .semi-title {
+  letter-spacing: 1px;
+  font-size: larger;
   margin: 0;
   font-family: 'Open-Sans';
   text-align: center;
@@ -33,6 +42,9 @@
 .main-image {
   width: 100%;
   height: 400px;
+  @media (min-width: 768px) {
+    height: 600px;
+  }
 }
 .main-image-photo {
   width: 100%;
@@ -47,6 +59,10 @@
   width: 100%;
   height: 30px;
   background-color: rgb(241, 214, 87);
+
+  @media (min-width: 768px) {
+    height: 55px;
+  }
 }
 .price-item-black {
   display: flex;
@@ -56,6 +72,10 @@
   height: 40px; /* высота параллелограмма */
   transform: skew(-20deg); /* наклон параллелограмма */
   background-color: rgb(44, 43, 40); /* цвет фона параллелограмма */
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 75px;
+  }
 }
 .price-item-red {
   display: flex;
@@ -65,14 +85,24 @@
   height: 40px; /* высота параллелограмма */
   transform: skew(-20deg); /* наклон параллелограмма */
   background-color: rgb(209, 74, 46); /* цвет фона параллелограмма */
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 75px;
+  }
 }
 .price-item-text {
   margin-bottom: 2px;
   font-size: 10px;
   color: white;
+  @media (min-width: 768px) {
+    font-size: x-large;
+  }
 }
 .price {
   color: white;
+  @media (min-width: 768px) {
+    font-size: xx-large;
+  }
 }
 .cross-relative {
   text-align: center;
@@ -87,6 +117,10 @@
   top: -5px;
   left: -4px;
   transform: rotate(10deg);
+  @media (min-width: 768px) {
+    width: 110px;
+    height: 50px;
+  }
 }
 .horizontal {
   position: absolute;
@@ -112,34 +146,52 @@
 //--
 .advantage-wrapper {
   margin-top: 16px;
+  @media (min-width: 768px) {
+    margin-top: 36px;
+  }
 }
 .advantage-list {
+  font-family: 'Open-Sans';
+  letter-spacing: 1px;
   list-style: none;
   margin: 0;
   padding: 0;
+  @media (min-width: 768px) {
+    padding: 0 50px;
+  }
 }
 .advantage-item {
   display: grid;
   grid-template-columns: 1fr 5fr;
   align-items: center;
   margin-top: 16px;
-  background-color: rgb(239,239, 239);
   border-radius: 10px;
   &:first-child {
     // background-color: rgb(239,239, 239);
     // border-radius: 10px;
     margin-top: 0;
   }
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 10fr;
+  }
 }
 .advantage-item-icon {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: green;
+  // background-color: green;
+}
+.advantage-item-icon-img {
+  width: 100%;
+  height: 100%;
 }
 .advantage-item-text {
   margin: 0;
-  
+  font-size: large;
+  letter-spacing: 1px;
+  @media (min-width: 768px) {
+    font-size: larger;
+  }
 }
 
 //--
@@ -152,23 +204,37 @@
   margin-top: 16px;
   border-top: 1px dashed rgb(121, 121, 121);
   border-bottom: 1px dashed rgb(121, 121, 121);
-  background-color: rgb(239,239, 239);
+  background-color: rgb(239, 239, 239);
+  @media (min-width: 768px) {
+    height: 170px;
+    margin-top: 24px;
+    justify-content: normal;
+  }
 }
-.timer-title{
+.timer-title {
   margin: 0;
   font-size: large;
-    font-weight: 100;
+  font-weight: 100;
+  letter-spacing: 1px;
+
+  @media (min-width: 768px) {
+    margin-top: 16px;
+    font-size: x-large
+  }
 }
 .timer-box {
   display: flex;
   gap: 35px;
   margin-top: 16px;
+  @media (min-width: 768px) {
+    gap: 80px;
+  }
 }
 .timer-wrapper {
   display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 50px;
   text-align: center;
 }
@@ -178,22 +244,25 @@
   margin-bottom: 6px;
 }
 
-
 .time-hour {
   width: 30px;
   height: 40px;
-  background-color: rgb(233,201,83);
+  background-color: rgb(233, 201, 83);
   font-size: 30px;
   font-weight: 500;
-}
-.time-min {
-  font-size: 40px;
-}
-.time-sec {
-  font-size: 40px;
+  @media (min-width:768px) {
+    width: 40px;
+    height: 50px;
+    font-size: 35px;
+  }
 }
 .time-text {
   font-weight: 300;
   font-size: 14px;
+  letter-spacing: 1px;
   margin: 0;
+
+  @media (min-width:768px) {
+    font-size: large;
+  }
 }
