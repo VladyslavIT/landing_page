@@ -2,6 +2,9 @@
     @media (min-width:768px) {
         padding-top: 10px;
     }
+    @media (min-width:1280px) {
+        padding-top: 30px;
+    }
 }
 .slider-title {
     margin: 0 0 16px 0;
@@ -11,6 +14,9 @@
     @media (min-width:768px) {
         text-align: center;
     }
+    @media (min-width:1280px) {
+        font-size: xx-large;
+    }
 }
 .slider-wrapper {
     display: flex;
@@ -19,4 +25,8 @@
     width: 100%;
     height: 400px;
     background-color: rgb(170, 70, 70);
+    @media (min-width:1280px) {
+        height: 600px;
+    }
+
 }

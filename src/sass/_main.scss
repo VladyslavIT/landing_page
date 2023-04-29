@@ -5,12 +5,15 @@
   @media (min-width: 768px) {
     height: 65px;
   }
+  @media (min-width: 1280px) {
+    height: 85px;
+  }
 }
 .title {
   letter-spacing: 1px;
   font-size: x-large;
   margin: 0;
-  font-family: 'Open-Sans';
+  font-family: "Open-Sans";
   text-shadow: 1px 1px 1px #000;
   text-align: center;
   color: white;
@@ -18,15 +21,21 @@
     letter-spacing: 3px;
     font-size: xx-large;
   }
+  @media (min-width: 1280px) {
+    font-size: xxx-large;
+  }
 }
 .semi-title {
   letter-spacing: 1px;
   font-size: larger;
   margin: 0;
-  font-family: 'Open-Sans';
+  font-family: "Open-Sans";
   text-align: center;
   text-shadow: 1px 1px 1px #000;
   color: white;
+  @media (min-width: 1280px) {
+    font-size: x-large;
+  }
 }
 //--
 .semi-title-wrapper {
@@ -44,6 +53,9 @@
   height: 400px;
   @media (min-width: 768px) {
     height: 600px;
+  }
+  @media (min-width: 1280px) {
+    height: 700px;
   }
 }
 .main-image-photo {
@@ -63,6 +75,9 @@
   @media (min-width: 768px) {
     height: 55px;
   }
+  @media (min-width: 1280px) {
+    height: 65px;
+  }
 }
 .price-item-black {
   display: flex;
@@ -75,6 +90,10 @@
   @media (min-width: 768px) {
     width: 200px;
     height: 75px;
+  }
+  @media (min-width: 1280px) {
+    width: 300px;
+    height: 85px;
   }
 }
 .price-item-red {
@@ -89,6 +108,10 @@
     width: 200px;
     height: 75px;
   }
+  @media (min-width: 1280px) {
+    width: 300px;
+    height: 85px;
+  }
 }
 .price-item-text {
   margin-bottom: 2px;
@@ -97,11 +120,17 @@
   @media (min-width: 768px) {
     font-size: x-large;
   }
+  @media (min-width: 1280px) {
+    font-size: xx-large;
+  }
 }
 .price {
   color: white;
   @media (min-width: 768px) {
     font-size: xx-large;
+  }
+  @media (min-width: 1280px) {
+    font-size: 36px;
   }
 }
 .cross-relative {
@@ -120,6 +149,10 @@
   @media (min-width: 768px) {
     width: 110px;
     height: 50px;
+  }
+  @media (min-width:1280px) {
+    width: 120px;
+    height: 55px;
   }
 }
 .horizontal {
@@ -151,7 +184,7 @@
   }
 }
 .advantage-list {
-  font-family: 'Open-Sans';
+  font-family: "Open-Sans";
   letter-spacing: 1px;
   list-style: none;
   margin: 0;
@@ -174,12 +207,14 @@
   @media (min-width: 768px) {
     grid-template-columns: 1fr 10fr;
   }
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 20fr;
+  }
 }
 .advantage-item-icon {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  // background-color: green;
 }
 .advantage-item-icon-img {
   width: 100%;
@@ -191,6 +226,9 @@
   letter-spacing: 1px;
   @media (min-width: 768px) {
     font-size: larger;
+  }
+  @media (min-width: 1280px) {
+    font-size: x-large;
   }
 }
 
@@ -210,6 +248,9 @@
     margin-top: 24px;
     justify-content: normal;
   }
+  @media (min-width: 1280px) {
+    height: 200px;
+  }
 }
 .timer-title {
   margin: 0;
@@ -219,7 +260,10 @@
 
   @media (min-width: 768px) {
     margin-top: 16px;
-    font-size: x-large
+    font-size: x-large;
+  }
+  @media (min-width: 1280px) {
+    font-size: xx-large;
   }
 }
 .timer-box {
@@ -229,6 +273,10 @@
   @media (min-width: 768px) {
     gap: 80px;
   }
+  @media (min-width: 1280px) {
+    margin-top: 30px;
+    gap: 120px;
+  }
 }
 .timer-wrapper {
   display: flex;
@@ -237,11 +285,17 @@
   align-items: center;
   width: 50px;
   text-align: center;
+  @media (min-width:1280px) {
+    width: 80px;
+  }
 }
 .timer-thumb {
   display: flex;
   gap: 10px;
   margin-bottom: 6px;
+  @media (min-width:1280px) {
+    margin-bottom: 10px;
+  }
 }
 
 .time-hour {
@@ -250,10 +304,15 @@
   background-color: rgb(233, 201, 83);
   font-size: 30px;
   font-weight: 500;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     width: 40px;
     height: 50px;
     font-size: 35px;
+  }
+  @media (min-width:1280px) {
+    width: 70px;
+    height: 60px;
+    font-size: 50px;
   }
 }
 .time-text {
@@ -262,7 +321,10 @@
   letter-spacing: 1px;
   margin: 0;
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     font-size: large;
+  }
+  @media (min-width:1280px) {
+    font-size: x-large;
   }
 }

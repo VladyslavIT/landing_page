@@ -12,6 +12,9 @@
     @media (min-width:768px) {
         padding-left: 35px;
     }
+    @media (min-width:1280px) {
+        font-size: x-large;
+    }
 }
 .steps-title-big {
     position: relative;
@@ -30,7 +33,10 @@
         @media (min-width:768px) {
             width: 7%;
             left: 38px;
-
+        }
+        @media (min-width:1280px) {
+            width: 5%;
+            left: 45px;
         }
     }
     &::after {
@@ -45,11 +51,18 @@
             width: 7%;
             left: 50px;
         }
+        @media (min-width:1280px) {
+            width: 5%;
+            left: 58px;
+        }
     }
 
     @media (min-width:768px) {
         padding-left: 35px;
         margin: 0 0 46px 0;
+    }
+    @media (min-width:1280px) {
+        font-size: 30px;
     }
 }
 .steps-list {
@@ -63,6 +76,9 @@
     letter-spacing: 1px;
     @media (min-width:768px) {
         padding-left: 60px;
+    }
+    @media (min-width:1280px) {
+        padding-left: 100px;
     }
 }
 .steps-items {
