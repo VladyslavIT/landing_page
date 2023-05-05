@@ -104,7 +104,6 @@ const swiper = new Swiper('.swiper', {
   // scrollbar: {
   //   el: '.swiper-scrollbar',
   // },
-  grabCursor: true,
   // spaceBetween: 10,
   speed: 500,
 });
