@@ -82,8 +82,6 @@ function startCountdown() {
 // Запускаем таймер при загрузке страницы
 startCountdown();
 
-
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -111,25 +109,8 @@ const swiper = new Swiper('.swiper', {
   speed: 500,
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const inputName = document.getElementById('input-name');
+
 inputName.addEventListener('click', () => {
   inputName.placeholder = '';
 });
@@ -140,6 +121,7 @@ inputName.addEventListener('blur', () => {
   }
 });
 const inputPhone = document.getElementById('input-phone');
+
 inputPhone.addEventListener('click', () => {
   inputPhone.placeholder = '';
 });
@@ -148,6 +130,43 @@ inputPhone.addEventListener('blur', () => {
   if (!inputPhone.value) {
     inputPhone.placeholder = 'Введіть номер телефону';
   }
+});
+
+async function sendData() {
+  // const form = document.querySelector('.form');
+  // const nameInput = form.getElementById('#input-name');
+  // const phoneInput = form.getElementById('#input-phone');
+
+  const data = {
+    name: inputName.value,
+    phone: inputPhone.value,
+  };
+  console.log(data);
+  try {
+    const response = await fetch('http://localhost:3000/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log(result);
+    } else {
+      console.error('Ошибка при отправке данных');
+    }
+  } catch (error) {
+    console.error('Ошибка при отправке запроса', error);
+  }
+}
+
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', async event => {
+  event.preventDefault();
+  await sendData();
 });
 
 const button = document.getElementById('buttonId');
