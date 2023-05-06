@@ -186,6 +186,7 @@ async function sendData() {
       Notiflix.Notify.failure('Сталася помилка при надсиланні даних');
     }
   } catch (error) {
+    Notiflix.Notify.failure('Сталася помилка при надсиланні даних');
     console.error('Ошибка при отправке запроса', error);
   }
 }
