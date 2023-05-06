@@ -178,7 +178,7 @@ async function sendData() {
     if (response.ok) {
       const result = await response.json();
       Notiflix.Notify.success('Дані надіслані, дякую!', {
-        timeout: 5000,
+        timeout: 3000,
         position: 'center-top',
       });
       console.log(result);
@@ -186,7 +186,10 @@ async function sendData() {
       Notiflix.Notify.failure('Сталася помилка при надсиланні даних');
     }
   } catch (error) {
-    Notiflix.Notify.failure('Сталася помилка при надсиланні даних');
+    Notiflix.Notify.failure('Сталася помилка при надсиланні даних', {
+      timeout: 3000,
+      position: 'center-top',
+    });
     console.error('Ошибка при отправке запроса', error);
   }
 }
