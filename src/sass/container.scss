@@ -4,6 +4,7 @@ body {
     justify-content: center;
 }
 .container {
+    overflow-x: hidden;
     padding:  10px 20px;
     @media (min-width: 430px) {
         width: 430px;
