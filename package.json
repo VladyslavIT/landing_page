@@ -12,16 +12,14 @@
     "url": "git+https://github.com/goitacademy/landing_page.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Vladyslav Chornyi <vlad.chernyy.1997@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.18.2",
     "modern-normalize": "^1.1.0",
-    "nodemailer": "^6.9.1"
+    "notiflix": "^3.2.6"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

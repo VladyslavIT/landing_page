@@ -134,16 +134,17 @@ inputName.addEventListener('blur', () => {
 });
 const inputPhone = document.getElementById('input-phone');
 
-
 const maskOptions = {
-  mask: '+{38} (000)-000-00-00'
+  mask: '+{38} (000)-000-00-00',
 };
 const mask = IMask(inputPhone, maskOptions);
 
 inputPhone.addEventListener('input', () => {
   const phoneValue = inputPhone.value.trim();
- if (phoneValue.length < 19) {
-    inputPhone.setCustomValidity('Будь ласка, введіть коректний номер телефону');
+  if (phoneValue.length < 19) {
+    inputPhone.setCustomValidity(
+      'Будь ласка, введіть коректний номер телефону'
+    );
   } else {
     inputPhone.setCustomValidity('');
   }
@@ -176,9 +177,13 @@ async function sendData() {
 
     if (response.ok) {
       const result = await response.json();
+      Notiflix.Notify.success('Дані надіслані, дякую!', {
+        timeout: 5000,
+        position: 'center-top',
+      });
       console.log(result);
     } else {
-      console.error('Ошибка при отправке данных');
+      Notiflix.Notify.failure('Сталася помилка при надсиланні даних');
     }
   } catch (error) {
     console.error('Ошибка при отправке запроса', error);
