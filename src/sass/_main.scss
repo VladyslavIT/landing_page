@@ -13,7 +13,7 @@
   letter-spacing: 1px;
   font-size: x-large;
   margin: 0;
-  font-family: "Open-Sans";
+  font-family: 'Open-Sans';
   text-shadow: 1px 1px 1px #000;
   text-align: center;
   color: white;
@@ -29,7 +29,7 @@
   letter-spacing: 1px;
   font-size: larger;
   margin: 0;
-  font-family: "Open-Sans";
+  font-family: 'Open-Sans';
   text-align: center;
   text-shadow: 1px 1px 1px #000;
   color: white;
@@ -69,7 +69,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30px;
+  height: 35px;
   background-color: rgb(241, 214, 87);
 
   @media (min-width: 768px) {
@@ -83,8 +83,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 105px; /* ширина параллелограмма */
-  height: 40px; /* высота параллелограмма */
+  width: 120px; /* ширина параллелограмма */
+  height: 50px; /* высота параллелограмма */
   transform: skew(-20deg); /* наклон параллелограмма */
   background-color: rgb(44, 43, 40); /* цвет фона параллелограмма */
   @media (min-width: 768px) {
@@ -100,8 +100,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 105px; /* ширина параллелограмма */
-  height: 40px; /* высота параллелограмма */
+  width: 120px; /* ширина параллелограмма */
+  height: 50px; /* высота параллелограмма */
   transform: skew(-20deg); /* наклон параллелограмма */
   background-color: rgb(209, 74, 46); /* цвет фона параллелограмма */
   @media (min-width: 768px) {
@@ -115,7 +115,7 @@
 }
 .price-item-text {
   margin-bottom: 2px;
-  font-size: 10px;
+  font-size: 16px;
   color: white;
   @media (min-width: 768px) {
     font-size: x-large;
@@ -125,6 +125,7 @@
   }
 }
 .price {
+  font-size: 23px;
   color: white;
   @media (min-width: 768px) {
     font-size: xx-large;
@@ -139,18 +140,18 @@
   display: flex;
 }
 .cross-wrapper {
-  width: 60px;
-  height: 30px;
+  width: 78px;
+  height: 35px;
   margin: 0;
   position: absolute;
   top: -5px;
-  left: -4px;
+  left: -3px;
   transform: rotate(10deg);
   @media (min-width: 768px) {
     width: 110px;
     height: 50px;
   }
-  @media (min-width:1280px) {
+  @media (min-width: 1280px) {
     width: 120px;
     height: 55px;
   }
@@ -184,7 +185,7 @@
   }
 }
 .advantage-list {
-  font-family: "Open-Sans";
+  font-family: 'Open-Sans';
   letter-spacing: 1px;
   list-style: none;
   margin: 0;
@@ -285,7 +286,7 @@
   align-items: center;
   width: 50px;
   text-align: center;
-  @media (min-width:1280px) {
+  @media (min-width: 1280px) {
     width: 80px;
   }
 }
@@ -293,7 +294,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 6px;
-  @media (min-width:1280px) {
+  @media (min-width: 1280px) {
     margin-bottom: 10px;
   }
 }
@@ -309,7 +310,7 @@
     height: 50px;
     font-size: 35px;
   }
-  @media (min-width:1280px) {
+  @media (min-width: 1280px) {
     width: 70px;
     height: 60px;
     font-size: 50px;
@@ -324,7 +325,7 @@
   @media (min-width: 768px) {
     font-size: large;
   }
-  @media (min-width:1280px) {
+  @media (min-width: 1280px) {
     font-size: x-large;
   }
 }

@@ -110,6 +110,19 @@ const swiper = new Swiper('.swiper', {
 
 const inputName = document.getElementById('input-name');
 
+inputName.addEventListener('input', () => {
+  const nameValue = inputName.value.trim();
+  if (nameValue.length < 3 || nameValue.length > 16) {
+    inputName.setCustomValidity(
+      'Ім`я має бути не менше 3 і не більше 16 символів'
+    );
+  } else if (!/^[a-zA-Zа-яА-ЯёЁ\s]*$/.test(nameValue)) {
+    inputName.setCustomValidity('Спеціальні символи не допускаються');
+  } else {
+    inputName.setCustomValidity('');
+  }
+});
+
 inputName.addEventListener('click', () => {
   inputName.placeholder = '';
 });
@@ -120,6 +133,21 @@ inputName.addEventListener('blur', () => {
   }
 });
 const inputPhone = document.getElementById('input-phone');
+
+
+const maskOptions = {
+  mask: '+{38} (000)-000-00-00'
+};
+const mask = IMask(inputPhone, maskOptions);
+
+inputPhone.addEventListener('input', () => {
+  const phoneValue = inputPhone.value.trim();
+ if (phoneValue.length < 19) {
+    inputPhone.setCustomValidity('Будь ласка, введіть коректний номер телефону');
+  } else {
+    inputPhone.setCustomValidity('');
+  }
+});
 
 inputPhone.addEventListener('click', () => {
   inputPhone.placeholder = '';
@@ -132,15 +160,11 @@ inputPhone.addEventListener('blur', () => {
 });
 
 async function sendData() {
-  // const form = document.querySelector('.form');
-  // const nameInput = form.getElementById('#input-name');
-  // const phoneInput = form.getElementById('#input-phone');
-
   const data = {
     name: inputName.value,
     phone: inputPhone.value,
   };
-  console.log(data);
+
   try {
     const response = await fetch('http://localhost:3000/submit', {
       method: 'POST',
@@ -166,6 +190,7 @@ const form = document.querySelector('.form');
 form.addEventListener('submit', async event => {
   event.preventDefault();
   await sendData();
+  form.reset();
 });
 
 const button = document.getElementById('buttonId');
