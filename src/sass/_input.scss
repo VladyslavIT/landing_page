@@ -1,6 +1,7 @@
 .input-section {
   padding-top: 24px;
   padding-bottom: 30px;
+  scroll-behavior: smooth;
   @media (min-width: 768px) {
     padding-top: 36px;
   }
