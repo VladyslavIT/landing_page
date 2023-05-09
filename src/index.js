@@ -14,14 +14,20 @@ const minElementTwo = document.getElementById('min-2');
 const secTensElementTwo = document.getElementById('sec-tens-2');
 const secElementTwo = document.getElementById('sec-2');
 
-// Задаем время в секундах
 let countdownSeconds = localStorage.getItem('countdownSeconds') || 26666;
+let countdownInterval;
 
-// Функция для обновления таймера
+function startCountdown() {
+  updateCountdown();
+
+  countdownInterval = setInterval(() => {
+    updateCountdown();
+    localStorage.setItem('countdownSeconds', countdownSeconds);
+  }, 1000);
+}
+
 function updateCountdown() {
-  // Вычисляем оставшееся время
   const hours = Math.floor(countdownSeconds / 3600);
-
   const minutes = Math.floor((countdownSeconds % 3600) / 60);
   const minuteTens = Math.floor(minutes / 10);
   const minuteOne = minutes % 10;
@@ -29,57 +35,29 @@ function updateCountdown() {
   const secondsTens = Math.floor((countdownSeconds % 60) / 10);
   const secondOne = countdownSeconds % 10;
 
-  // Обновляем элемент с таймером
   hourElement.textContent = hours;
-
   minTensElement.textContent = minuteTens;
   minElement.textContent = minuteOne;
 
   secTensElement.textContent = secondsTens;
   secElement.textContent = secondOne;
-  //----------
-  hourElementTwo.textContent = hours;
 
+  hourElementTwo.textContent = hours;
   minTensElementTwo.textContent = minuteTens;
   minElementTwo.textContent = minuteOne;
 
   secTensElementTwo.textContent = secondsTens;
   secElementTwo.textContent = secondOne;
 
-  // Уменьшаем оставшееся время
   countdownSeconds -= 1;
 
-  // Если время вышло
   if (countdownSeconds < 0) {
-    // Останавливаем таймер
     clearInterval(countdownInterval);
-
-    // Очищаем локальное хранилище
     localStorage.removeItem('countdownSeconds');
-
-    // Обновляем значение таймера
     countdownSeconds = 26666;
-
-    // Запускаем таймер заново
     startCountdown();
   }
 }
-
-// Функция для запуска таймера
-function startCountdown() {
-  // Обновляем таймер
-  updateCountdown();
-
-  // Запускаем интервал обновления таймера каждую секунду
-  const countdownInterval = setInterval(() => {
-    updateCountdown();
-
-    // Сохраняем оставшееся время в локальное хранилище
-    localStorage.setItem('countdownSeconds', countdownSeconds);
-  }, 1000);
-}
-
-// Запускаем таймер при загрузке страницы
 startCountdown();
 
 const swiper = new Swiper('.swiper', {

@@ -5,15 +5,15 @@ body {
 }
 .container {
     overflow-x: hidden;
-    padding:  10px 20px;
+    padding: 10px 20px;
     @media (min-width: 430px) {
         width: 430px;
     }
-    
-     @media (min-width: 768px) {
+
+    @media (min-width: 768px) {
         width: 770px;
     }
-    @media (min-width: 1280px) {
-        width: 1024px;
-    }
+    // @media (min-width: 1280px) {
+    //     width: 1024px;
+    // }
 }

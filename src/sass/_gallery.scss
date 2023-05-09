@@ -1,8 +1,8 @@
 .gallery {
     display: flex;
     flex-direction: column;
-    @media (min-width:768px) {
-        padding-top: 10px;
+    @media (min-width: 768px) {
+        padding-top: 36px;
     }
 }
 .image-1 {
@@ -13,20 +13,20 @@
     width: 100%;
     height: 300px;
     background-color: rgb(50, 45, 45);
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
         height: 400px;
     }
-    @media (min-width:1280px) {
+    @media (min-width: 1280px) {
         height: 600px;
     }
 }
 .image-2-wrapper {
     width: 100%;
     height: 240px;
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
         height: 400px;
     }
-    @media (min-width:1280px) {
+    @media (min-width: 1280px) {
         height: 600px;
     }
 }
@@ -34,4 +34,8 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.advantage-wrapper-gallery-2 {
+    margin-bottom: 16px;
 }
