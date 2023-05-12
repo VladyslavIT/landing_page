@@ -1,3 +1,5 @@
+import 'whatwg-fetch';
+
 const hourElement = document.getElementById('hour');
 
 const minTensElement = document.getElementById('min-tens');
@@ -138,28 +140,24 @@ inputPhone.addEventListener('blur', () => {
   }
 });
 
-async function sendData() {
-  const data = {
-    name: inputName.value,
-    phone: inputPhone.value,
-  };
-
+async function sendData(formData) {
+  const data = Object.fromEntries(formData.entries());
   try {
-    const response = await fetch('http://localhost:3000/submit', {
+    const response = await fetch('http://addresstablichki.com.ua/server.php', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data),
     });
-
     if (response.ok) {
       const result = await response.json();
       Notiflix.Notify.success('Дані надіслані, дякую!', {
-        timeout: 3000,
+        width: '300px',
+        // height: '300px',
+        timeout: 4000,
         position: 'center-top',
       });
-      console.log(result);
     } else {
       Notiflix.Notify.failure('Сталася помилка при надсиланні даних');
     }
@@ -174,11 +172,13 @@ async function sendData() {
 
 const form = document.querySelector('.form');
 
-form.addEventListener('submit', async event => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  await sendData();
+  const formData = new FormData(form);
+  await sendData(formData);
   form.reset();
 });
+
 
 const button = document.getElementById('buttonId');
 const button2 = document.getElementById('buttonId-2');
